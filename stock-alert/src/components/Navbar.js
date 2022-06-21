@@ -16,21 +16,21 @@ function Navbar() {
     return (
         <>
         <IconContext.Provider value={{color: 'white'}, {size:35}} >
-        <div className='row justify-content-around'>
+        <div className='row justify-content-around' id="nav">
             <div className='navbar col-6 '>
                 <Nav className="left">
                     <Nav.Link href="#" id=''>
-                        <SiCashapp size={50} color="#0394fc"/>
+                        <SiCashapp size={50} color="skyblue"/>
                     </Nav.Link>
                 </Nav>
             </div>
             <div className='navbar col-6'>
                 <Nav className="right">
                     <Nav.Link href='#' id='login'>
-                        <AiOutlineUser color={'black'}/>
+                        <AiOutlineUser color='white'/>
                     </Nav.Link>
                     <Nav.Link href="#" id='burger'>
-                        <FiMenu onClick={showSidebar} color={'black'}/>
+                        <FiMenu onClick={showSidebar} color='white'/>
                     </Nav.Link>
                 </Nav>
             </div>

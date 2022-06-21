@@ -1,0 +1,13 @@
+#search-bar-container{
+    margin: 5vh 0;
+    display: flex;
+    justify-content: center;
+}
+#search-bar{
+    width: 80%;
+}
+
+#search-icon{
+    background-color: white;
+    border-right: none;
+}
