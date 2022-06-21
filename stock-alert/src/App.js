@@ -1,8 +1,8 @@
 import React from "react"
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Sidebar from "./components/Navbar";
-
+import Navbar from "./components/Navbar";
+import Main from './components/Main'
 
 
 import 'bootstrap/dist/css/bootstrap.min.css'
@@ -11,9 +11,8 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 function App() {
   return (
     <div className="App">
-      <Sidebar />
-      <h1>HI</h1>
-      
+      <Navbar/>
+      <Main/>
     </div>
   );
 }

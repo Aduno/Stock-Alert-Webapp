@@ -1,34 +1,46 @@
 import React, { useState } from 'react'
 import { FiMenu } from "react-icons/fi";
-import { Link } from 'react-router-dom';
-import { AiOutlineClose } from 'react-icons/ai';
+import { AiOutlineClose, AiOutlineUser } from 'react-icons/ai';
+import { SiCashapp } from 'react-icons/si';
 
 import { Nav } from 'react-bootstrap'
 import { SidebarData } from '../data/SidebarData';
-import { Route } from 'react-router-dom';
 
 import './css/Sidebar.css';
 import { IconContext } from 'react-icons/lib';
 
-function Sidebar() {
+function Navbar() {
     const [sidebar, setSidebar] = useState(false)
 
     const showSidebar = () => setSidebar(!sidebar)
     return (
         <>
-        <IconContext.Provider value={{color: 'black'}}>
-        <div className="navbar">
-        <Nav>
-            <Nav.Link href="#" id='burger'>
-                <FiMenu onClick={showSidebar}/>
-            </Nav.Link>
-        </Nav>
+        <IconContext.Provider value={{color: 'white'}, {size:35}} >
+        <div className='row justify-content-around'>
+            <div className='navbar col-6 '>
+                <Nav className="left">
+                    <Nav.Link href="#" id=''>
+                        <SiCashapp size={50} color="#0394fc"/>
+                    </Nav.Link>
+                </Nav>
+            </div>
+            <div className='navbar col-6'>
+                <Nav className="right">
+                    <Nav.Link href='#' id='login'>
+                        <AiOutlineUser color={'black'}/>
+                    </Nav.Link>
+                    <Nav.Link href="#" id='burger'>
+                        <FiMenu onClick={showSidebar} color={'black'}/>
+                    </Nav.Link>
+                </Nav>
+            </div>
         </div>
-        <nav className = {sidebar ? 'nav-menu active' : 'nav-menu'}>
-            <ul className='nav-menu-items'>
+        <div className='row'>
+        <nav className = {sidebar ? 'nav-menu col-md-2 col-sm-9 col-xs-9': 'nav-menu active' }>
+            <ul className='nav-menu-items' onClick={showSidebar}>
                 <li className='sidebar-toggle'>
                     <Nav.Link to="#" className='menu-bars float-end'>
-                        <AiOutlineClose/>
+                        <AiOutlineClose size={35} color='white'/>
                     </Nav.Link>
                 </li>
                 {SidebarData.map((item, index)=> {
@@ -43,9 +55,10 @@ function Sidebar() {
                 })}
             </ul>
         </nav>
+        </div>
         </IconContext.Provider>
         </>
     )
 }
 
-export default Sidebar
+export default Navbar
