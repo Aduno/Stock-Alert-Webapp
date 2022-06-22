@@ -2,6 +2,7 @@ import React, { useRef } from 'react'
 import { Form, FormControl, FormGroup, InputGroup } from 'react-bootstrap'
 import { AiOutlineSearch } from 'react-icons/ai'
 
+import Graph from './Graph'
 import './css/Main.css'
 
 function Main() {
@@ -29,7 +30,7 @@ function Main() {
         </InputGroup>
         </div>
         {/* // Graph */}
-
+        <Graph/>
         {/* // Earning graph */}
 
         {/* // Important data */}
