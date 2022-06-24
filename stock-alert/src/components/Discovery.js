@@ -1,12 +1,12 @@
-import React from 'react'
+import React from 'react';
 
 function Discovery() {
   return (
-    // Title
-
-    // Interactive button
-
-    // Dynamic list
+    <>
+    {/* // Title */}
+    {/* // Interactive button */}
+    {/*// Dynamic list */}
+    </>
   )
 }
 

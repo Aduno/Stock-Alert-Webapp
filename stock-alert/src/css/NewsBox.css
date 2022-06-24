@@ -1,0 +1,29 @@
+
+.newsbox{
+    border-radius: 4px;
+    width: 75%;
+    margin-top: 3vh;
+    padding: 10px;
+    background-color: rgb(0, 87, 94);
+}
+
+.story-img{
+    padding-top: 3vh;
+    width: 90%;
+}
+
+.title{
+    font-weight: bold;
+    padding-top: 2vh;
+    padding-left: 5%;
+}
+.text{
+    font-size: small;
+    padding-left: 5%;  
+}
+
+@media screen and (min-width: 800px) {
+    .newsbox{
+        width: 50%;
+    }    
+}

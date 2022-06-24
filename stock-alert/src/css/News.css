@@ -1,0 +1,20 @@
+Button, h1,h2,h3,h4, h5, p{
+    color: white;
+    font-family: 'Lora', serif; 
+}
+#news-title{
+    color:black;
+    text-align: center;
+    text-decoration: underline;
+    font-weight: 500;
+}
+.sub-btn{
+    margin:6vh 0;
+    width: 100%;
+}
+
+a{
+    margin:none;
+    text-decoration: none;
+    display:block;
+}

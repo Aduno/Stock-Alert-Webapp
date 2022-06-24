@@ -3,7 +3,8 @@ import { Form, FormControl, FormGroup, InputGroup } from 'react-bootstrap'
 import { AiOutlineSearch } from 'react-icons/ai'
 
 import Graph from './Graph'
-import './css/Main.css'
+import '../css/Main.css'
+import { IconContext } from 'react-icons/lib'
 
 function Main() {
   const ref = useRef(null);
@@ -18,7 +19,7 @@ function Main() {
         <div id='search-bar-container'>
         <InputGroup id='search-bar'>
           <InputGroup.Text id='search-icon' onClick={handleClick}>
-            <AiOutlineSearch />
+            <AiOutlineSearch color='black'/>
           </InputGroup.Text>
           <FormControl
             type='search'

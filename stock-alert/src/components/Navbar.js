@@ -6,7 +6,7 @@ import { SiCashapp } from 'react-icons/si';
 import { Nav } from 'react-bootstrap'
 import { SidebarData } from '../data/SidebarData';
 
-import './css/Sidebar.css';
+import '../css/Sidebar.css';
 import { IconContext } from 'react-icons/lib';
 
 function Navbar() {
