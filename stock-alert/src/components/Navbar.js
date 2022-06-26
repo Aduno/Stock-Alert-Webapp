@@ -45,12 +45,14 @@ function Navbar() {
                 </li>
                 {SidebarData.map((item, index)=> {
                     return (
-                        <li key={index} className={item.cName}>
-                            <Nav.Link to={item.path}>
-                                {item.icon}
-                                <span>{item.title}</span>
-                            </Nav.Link>
-                        </li>
+                        <a className='link' href={item.path}>
+                            <li key={index} className={item.cName}>
+                                <div>
+                                    {item.icon}
+                                    <span className='link-text'>{item.title}</span>
+                                </div>
+                            </li>
+                        </a>
                     );
                 })}
             </ul>

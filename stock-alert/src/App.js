@@ -11,12 +11,13 @@ import News from "./components/News";
 
 function App() {
   return (
-          <div className="App">
-            <Navbar/>
-            <Main/>
-            <News/>
-          </div>
-    
+    <>
+      <Navbar/>
+      <div className="App">
+        <Main/>
+        <News/>
+      </div>
+    </>
   );
 }
 

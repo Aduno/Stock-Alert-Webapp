@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap');
+
 Button, h1,h2,h3,h4, h5, p{
     color: white;
-    font-family: 'Lora', serif; 
+    font-family: 'Titillium Web', sans-serif;
 }
 #news-title{
     color:black;

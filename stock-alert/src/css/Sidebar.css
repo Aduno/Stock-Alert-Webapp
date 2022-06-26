@@ -25,15 +25,16 @@
     height: 100vh; 
     justify-content: right;
     position: fixed;
-    top: 0;
+    top:0;
     right:0;
     transition: 500ms;
 }
 
 .nav-menu-items{
     width: 100%;
-    padding-top: 1vh;
+    padding-top: 5vh;
     padding-left: 0;
+    z-index: 3;
 }
 
 .nav-menu.active {
@@ -51,16 +52,18 @@
     list-style: none;
     height: 60px;
 }
-
-.nav-text a{
+.link {
     text-decoration: none;
-    color:white;
+    color: white;
+}
+.nav-text{
+    padding-left: 10px;
     font-size: 16px;
     display:flex;
     align-items: center;
     border-radius: 4px;
 }
 
-.nav-link span{
+.link-text{
     padding-left: 15px
 }

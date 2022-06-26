@@ -5,7 +5,7 @@ import { FaRegNewspaper } from 'react-icons/fa'
 export const SidebarData = [
     {
         title: 'Stock',
-        path: '#stock',
+        path: '#search-bar-container',
         icon: <AiOutlineStock/>,
         cName: 'nav-text'
     },
