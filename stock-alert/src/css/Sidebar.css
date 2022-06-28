@@ -28,13 +28,13 @@
     top:0;
     right:0;
     transition: 500ms;
+    z-index: 1;
 }
 
 .nav-menu-items{
     width: 100%;
     padding-top: 5vh;
     padding-left: 0;
-    z-index: 3;
 }
 
 .nav-menu.active {

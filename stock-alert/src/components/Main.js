@@ -12,11 +12,14 @@ function Main() {
   const ref = useRef(null);
   const handleClick = () =>{ // For focusing on search bar when you click on the icon
     ref.current.focus();
+    console.log("HUH");
   };
-
   const [symbol, setSymbol] = useState('GOOG'); //Default as google
   const [interval, setInterval] = useState('1h'); // Default as 1 hour interval
 
+  const loadAutoComplete = () => {
+    console.log("hm");
+  }
   return (
     <>
      {/* search bar */}
@@ -33,8 +36,11 @@ function Main() {
             aria-label='Search'
             id='search-bar-input'
             ref={ref}
+            onChange={loadAutoComplete}
+            
           />
         </InputGroup>
+        
         </div>
         {/* // Graph */}
         

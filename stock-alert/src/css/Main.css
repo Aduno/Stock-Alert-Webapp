@@ -5,15 +5,13 @@
 }
 #search-bar{
     width: 80%;
-    z-index: -1;
+    z-index: 0;
 }
 
 #search-icon{
     background-color: white;
     border-right: none;
 }
-
-
 
 .btn-container{
     margin: 3vh 0;

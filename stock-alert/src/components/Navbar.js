@@ -10,9 +10,9 @@ import '../css/Sidebar.css';
 import { IconContext } from 'react-icons/lib';
 
 function Navbar() {
-    const [sidebar, setSidebar] = useState(false)
+    const [sidebar, setSidebar] = useState(false);
 
-    const showSidebar = () => setSidebar(!sidebar)
+    const showSidebar = () => setSidebar(!sidebar);
     return (
         <>
         <IconContext.Provider value={{color: 'white'}, {size:35}} >
@@ -40,7 +40,7 @@ function Navbar() {
             <ul className='nav-menu-items' onClick={showSidebar}>
                 <li className='sidebar-toggle'>
                     <Nav.Link to="#" className='menu-bars float-end'>
-                        <AiOutlineClose size={35} color='white'/>
+                        <AiOutlineClose size={35} color='transparent'/>
                     </Nav.Link>
                 </li>
                 {SidebarData.map((item, index)=> {
