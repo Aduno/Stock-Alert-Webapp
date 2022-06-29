@@ -31,6 +31,68 @@ export const STOCKS = {
     ZM: 'Zoom Video Communications, Inc.'
 }
 
+export const STOCKNAMES = {
+"AT&T Inc.": "T",
+
+"Airbnb, Inc.": "ABNB",
+
+"Alphabet Inc.": "GOOG",
+
+"Amazon Inc": "AMZN",
+
+"Amgen Inc.": "AMGN",
+
+"Apple Inc.": "AAPL",
+
+"Astrazeneca PLC": "AZN",
+
+"Biogen Idec Inc.": "BIIB",
+
+"Bumble Inc.": "BMBL",
+
+"Cenovus Energy Inc": "CVE",
+
+"Chevron Corporation": "CVX",
+
+"Cigna Corporation": "CI",
+
+"Dollar Tree, Inc.": "DLTR",
+
+"EQT Corporation": "EQT",
+
+"Electronic Arts Inc.": "EA",
+
+"Exxon Mobil Corporation": "XOM",
+
+"FedEx Corporation": "FDX",
+
+"General Dynamics Corporation": "GD",
+
+"GitLab Inc.": "GTLB",
+
+"H&R Block, Inc.": "HRB",
+
+"Johnson & Johnson": "JNJ",
+
+"Lockheed Martin Corporation": "LMT",
+
+"Merck & Company, Inc.": "MRK",
+
+"Monster Beverage Corporation": "MNST",
+
+"NIO Inc.": "NIO",
+
+"Phillips 66": "PSX",
+
+"Royalty Pharma plc": "RPRX",
+
+"SM Energy Company": "SM",
+
+"Verizon Communications Inc.": "VZ",
+
+"Zoom Video Communications, Inc.": "ZM",
+}
+
 export const STOCKTYPE = {
     Agriculture: [{DE:"Deere & Co."},{MOS:"Mosaic Company"}, {ALG: "Alamo Group Inc."}, {SEB: "Seaboard Corp."}],
     Banking: [{TD: "Toronto Dominion Bank"}, {RY: "Royal Bank of Canada"}, {BMO: "Bank of Montreal"}, {CM: "Canadian Imperial Bank of Commerce"}, {JPM: "JPMorgan Chase & Co."}],

@@ -11,7 +11,7 @@ import {
   registerables,
 } from 'chart.js';
 import { Line } from 'react-chartjs-2';
-import {TIMEINTERVAL} from '../data/StockData';
+import {STOCKS, TIMEINTERVAL} from '../data/StockData';
 
 ChartJS.register(
   CategoryScale,
@@ -23,24 +23,10 @@ ChartJS.register(
   Legend
 );
 
-export const options = {
-  responsive: true,
-
-  plugins: {
-    legend: {
-      position: 'top',
-    },
-    title: {
-      display: true,
-      text: 'Stock name',
-    },
-  },
-};
-
 
 function Graph(props) {
   let tempTime = '5m'
-  let tempsymbol = 'AMZN'
+  let tempsymbol = 'GOOG'
   let url = "https://www.alphavantage.co/query?"+ TIMEINTERVAL[tempTime] + "&symbol=" + tempsymbol + "&apikey=RAXQU48KQ5ND451R"; 
   // let url = "https://www.alphavantage.co/query?"+ TIMEINTERVAL[props.interval]+"symbol="+props.symbol.split(":")[0]+"&apikey="+process.env.ALPHA_VANTAGE
   const [labels, setLabel] = useState([]);
@@ -59,6 +45,7 @@ function Graph(props) {
   }
 
   const fetchData = async () => {
+    url = "https://www.alphavantage.co/query?"+ TIMEINTERVAL[tempTime] + "&symbol=" + props.symbol + "&apikey=RAXQU48KQ5ND451R";
     const res = await fetch(url);
     const json = await res.json();
     return json
@@ -77,23 +64,38 @@ function Graph(props) {
         label.push(temp);
         data.push(value["1. open"]);
       }
+      label.reverse(); 
+      data.reverse();
       setData(data)
       setLabel(label);
     })
-  }, []) //Need to add props.time or something like that so it updates everytime the time var is updated
+  }, [props.symbol]) //Need to add props.time or something like that so it updates everytime the time var is updated
   
   const component = () => {
     const data = {
       labels,
       datasets: [
         {
-          label: 'Time interval',
+          label: "time range",
           data: dataPoints,
           borderColor: 'rgb(0, 87, 94)',
           backgroundColor: 'rgb(0, 87, 94)',
         }
       ]
-    }
+    };
+    const options = {
+      responsive: true,
+    
+      plugins: {
+        legend: {
+          position: 'top',
+        },
+        title: {
+          display: true,
+          text: STOCKS[props.symbol],
+        },
+      },
+    };
     return(
         <Line options= {options} data = {data} />
     )

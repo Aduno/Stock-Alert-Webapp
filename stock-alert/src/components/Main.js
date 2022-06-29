@@ -7,6 +7,7 @@ import '../css/Main.css'
 import { IconContext } from 'react-icons/lib'
 import Earnings from './BarGraph'
 import IntervalButton from './IntervalButton'
+import AutoCompleteText from './AutoCompleteText'
 
 function Main() {
   const ref = useRef(null);
@@ -17,35 +18,31 @@ function Main() {
   const [symbol, setSymbol] = useState('GOOG'); //Default as google
   const [interval, setInterval] = useState('1h'); // Default as 1 hour interval
 
-  const loadAutoComplete = () => {
+  const updateGraph = () => {
     console.log("hm");
   }
+
+  
+
   return (
     <>
      {/* search bar */}
     <div className='container-fluid'>
       <div className='row  justify-content-center'>
         <div id='search-bar-container'>
-        <InputGroup id='search-bar'>
-          <InputGroup.Text id='search-icon' onClick={handleClick}>
-            <AiOutlineSearch color='black'/>
-          </InputGroup.Text>
-          <FormControl
-            type='search'
-            placeholder='Search stock'
-            aria-label='Search'
-            id='search-bar-input'
-            ref={ref}
-            onChange={loadAutoComplete}
-            
-          />
-        </InputGroup>
+        
+        <div id='search-bar'>
+        <span id='search-bar-input'>
+            <AutoCompleteText onSubmit= {setSymbol}/>
+        </span>
+        </div>
+        
         
         </div>
         {/* // Graph */}
         
         <div className='bg-grey col-11'>
-        <Graph symbol='STONK' interval={interval}/>
+        <Graph symbol={symbol} interval={interval}/>
         </div>
 
         <div className='btn-container'> 

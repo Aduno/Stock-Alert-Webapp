@@ -1,0 +1,38 @@
+.AutoCompleteText{
+    width: 100%;
+    border: 1px solid grey;
+    box-shadow: 0 0 0 1px rgba(0,0,0,0.1), 0 2px 4px 1px rgba(0,0,0,0.18);
+}
+
+.AutoCompleteText input {
+    width: 100%;
+    border: none;
+    box-sizing: border-box;
+    outline: none;
+}
+.suggestion-container{
+    position: relative;
+    z-index: 1;
+}
+.AutoCompleteText ul {
+    border: 1px solid gray;
+    position: absolute;
+    height: fit-content;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-align: left;
+}
+
+.AutoCompleteText li {
+    background-color: white;
+    padding: 10px 5px; 
+}
+
+.stock-suggestions li:hover{
+    background-color: grey;
+}
