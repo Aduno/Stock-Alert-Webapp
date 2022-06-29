@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/Stock-Alert-Webapp/static/css/main.8bdba1da.css",
+    "main.js": "/Stock-Alert-Webapp/static/js/main.8119fa10.js",
+    "static/media/stock.png": "/Stock-Alert-Webapp/static/media/stock.477808acd6dc7e1562b9.png",
+    "static/media/elon.png": "/Stock-Alert-Webapp/static/media/elon.f29e5f99d093caf962b6.png",
+    "static/media/housing.png": "/Stock-Alert-Webapp/static/media/housing.2e5ff86e8a9ce26c6f79.png",
+    "static/media/agriculture.svg": "/Stock-Alert-Webapp/static/media/agriculture.a0a6e81a252bb8b75b6f68b6b8edce5e.svg",
+    "static/media/telecom.svg": "/Stock-Alert-Webapp/static/media/telecom.11892df750c868d7942c73106ba0f103.svg",
+    "static/media/engineering.svg": "/Stock-Alert-Webapp/static/media/engineering.519d29d2be9d85251cecf3acec3a4249.svg",
+    "static/media/energy.svg": "/Stock-Alert-Webapp/static/media/energy.d88dbbc48505f330a7993a5b4e396f58.svg",
+    "static/media/banking.svg": "/Stock-Alert-Webapp/static/media/banking.86b281dee24493a2b0313cdf8f0f7659.svg",
+    "static/media/insurance.svg": "/Stock-Alert-Webapp/static/media/insurance.709ffb8446b1f173549f5da49e51275c.svg",
+    "index.html": "/Stock-Alert-Webapp/index.html",
+    "static/media/mining.svg": "/Stock-Alert-Webapp/static/media/mining.d846ab3e762c4eaed3bc12274db74932.svg",
+    "static/media/software.svg": "/Stock-Alert-Webapp/static/media/software.a9c260dda1e476522700cd4a7e4da338.svg",
+    "main.8bdba1da.css.map": "/Stock-Alert-Webapp/static/css/main.8bdba1da.css.map",
+    "main.8119fa10.js.map": "/Stock-Alert-Webapp/static/js/main.8119fa10.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8bdba1da.css",
+    "static/js/main.8119fa10.js"
+  ]
+}
