@@ -11,13 +11,13 @@ export const SidebarData = [
     },
     {
         title: 'Create alert',
-        path: '#alert',
+        path: '#summary',
         icon: <MdAddAlert/>,
         cName: 'nav-text'
     },
     {
         title: 'Discover Stocks',
-        path: '#discover',
+        path: '#discovery',
         icon: <AiOutlineFileSearch/>,
         cName: 'nav-text'
     },

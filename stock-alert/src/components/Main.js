@@ -20,6 +20,13 @@ function Main() {
   // For stock alert modal
   const [show, setShow] = useState(false);
   const [confirmed, setConfirmed] = useState(false);
+  const [checked, setChecked] = useState(false);
+
+  const handleChecked = (e) =>{
+    setChecked(!checked);
+    
+  }
+
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   const handleTransition = () => {
@@ -85,11 +92,11 @@ function Main() {
               <h5 className='text-dark text-center'>{symbol}</h5>
 
               {/* Increase/decrease */}
-              <ToggleButtonGroup className='col-12'type="radio" name="options" defaultValue={1} onChange={()=>console.log("here")}>
-                <ToggleButton id="tbg-radio-1" value={1}>
+              <ToggleButtonGroup className='col-12 toggle-group'type="radio" name="options" defaultValue={1} onChange={handleChecked}>
+                <ToggleButton className={checked? 'toggled-btn':'untoggled-btn'} id="tbg-radio-1" value={1}>
                   Increase
                 </ToggleButton>
-                <ToggleButton id="tbg-radio-2" value={2}>
+                <ToggleButton className={checked? 'untoggled-btn':'toggled-btn'} id="tbg-radio-2" value={2}>
                   Decrease
                 </ToggleButton>
               </ToggleButtonGroup>
