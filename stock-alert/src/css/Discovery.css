@@ -1,0 +1,35 @@
+#discovery-title{
+    color:black;
+    text-align: center;
+    text-decoration: underline;
+    font-weight: 500;
+}
+.btn-group-container {
+    width: 90%;
+}
+.btn-group-container button {
+    padding: 5px 0;
+    margin-top: 1vh;
+    width: 37%;
+}
+
+button img{
+    max-height: 25px;
+    padding-right: 0.5rem;
+}
+button span{
+    padding-right: 0.5rem; 
+}
+#list-container{
+    width: 80%;
+    border-radius: 5px;
+    margin: 2vh 0;   
+    background-color: rgb(215,215,215); 
+}
+#list-container ul {
+    padding: 0;
+}
+.filtered-item{
+    list-style-type: none;
+    padding-top: 1rem;
+}

@@ -18,7 +18,7 @@ export default function News() {
 
   return (
     <>
-    <div className='container-fluid'>
+    <div id='stories' className='container-fluid'>
       <h1 id="news-title">Top Stories</h1>
 
       {/* // Newsboxes */}

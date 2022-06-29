@@ -36,7 +36,7 @@ function Main() {
   return (
     <>
      {/* search bar */}
-    <div className='container-fluid'>
+    <div className='container-fluid' id='main'>
       <div className='row  justify-content-center'>
         <div id='search-bar-container'>
         
@@ -70,7 +70,7 @@ function Main() {
         {/* // Important data */}
         <Summary />
         {/* // Subscribe */}
-        <div className="col-4 text-center sub-btn">
+        <div id='alert' className="col-4 text-center sub-btn">
           <Button onClick={handleShow}>
             Create alert
           </Button>
