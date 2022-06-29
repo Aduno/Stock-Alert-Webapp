@@ -1,0 +1,11 @@
+#summary{
+    width: 90%;
+    border-radius: 5px;
+    margin: 3vh 0;
+    padding-top: 3vh;
+    background-color: rgb(214, 214, 214);
+}
+
+.col-6{
+    padding: 0 0 1rem 0;
+}

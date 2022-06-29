@@ -4,7 +4,7 @@ import Story from './Story'
 import '../css/News.css'
 
 import { stories } from '../data/NewsStory'
-import { Button, Modal } from 'react-bootstrap'
+import { Button, Form, Modal } from 'react-bootstrap'
 import { BrowserRouter, Routes, Route, Router, Link } from "react-router-dom";
 
 import { propTypes } from 'react-bootstrap/esm/Image'
@@ -12,9 +12,9 @@ import { propTypes } from 'react-bootstrap/esm/Image'
 
 export default function News() {
 
-  const [show, setShow] = useState(false);
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+  const [sub, setSub] = useState(false);
+  const handleSubClose = () => setSub(false);
+  const handleSubShow = () => setSub(true);
 
   return (
     <>
@@ -28,21 +28,68 @@ export default function News() {
 
       {/* // Subscription btn */}
       <div className="col text-center sub-btn">
-        <Button onClick={handleShow}>
+        <Button onClick={handleSubShow}>
           Subscribe to our newsletter
         </Button>
       </div>
     </div>
-    <Modal show={show} onHide={handleClose}>
+    <Modal show={sub} onHide={handleSubClose}>
         <Modal.Header closeButton>
-          <Modal.Title>Modal heading</Modal.Title>
+          <Modal.Title>Newsletter</Modal.Title>
         </Modal.Header>
-        <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
+        <Modal.Body>
+          <div className='row justify-content-center'>
+            <input className='col-11' type='name' placeholder='Full name'/>
+            <input className= 'col-11' type='email' placeholder='Email'/>
+            <Form className='col-11'>
+              <div key={`inline-$checkbox`} className="mb-3">
+                <Form.Check
+                  inline
+                  label="Agriculture"
+                  name="group1"
+                  type='checkbox'
+                  id={`inline-checkbox-1`}
+                />
+                <Form.Check
+                  inline
+                  label=""
+                  name="group1"
+                  type='checkbox'
+                  id={`inline-checkbox-2`}
+                />
+                <Form.Check
+                  inline
+                  label="3"
+                  type='checkbox'
+                  id={`inline-checkbox-3`}
+                />
+                <Form.Check
+                  inline
+                  label="4"
+                  type='checkbox'
+                  id={`inline-checkbox-4`}
+                />
+                <Form.Check
+                  inline
+                  label="5"
+                  type='checkbox'
+                  id={`inline-checkbox-5`}
+                />
+                <Form.Check
+                  inline
+                  label="6"
+                  type='checkbox'
+                  id={`inline-checkbox-6`}
+                />
+              </div>
+            </Form>
+          </div>
+        </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
+          <Button variant="secondary" onClick={handleSubClose}>
             Close
           </Button>
-          <Button variant="primary" onClick={handleClose}>
+          <Button variant="primary" onClick={handleSubClose}>
             Save Changes
           </Button>
         </Modal.Footer>
