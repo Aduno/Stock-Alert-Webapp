@@ -112,7 +112,7 @@ function Main() {
               <Button variant="secondary" onClick={handleClose}>
                 Close
               </Button>
-              <Button variant="primary" onClick={handleTransition}>
+              <Button className='primary' variant="primary" onClick={handleTransition}>
                 Create alert
               </Button>
             </Modal.Footer>

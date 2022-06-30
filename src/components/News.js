@@ -119,7 +119,7 @@ export default function News() {
           <Button variant="secondary" onClick={handleSubClose}>
             Close
           </Button>
-          <Button variant="primary" onClick={subConfirmTransition}>
+          <Button className='primary' variant="primary" onClick={subConfirmTransition}>
             Subscribe
           </Button>
         </Modal.Footer>

@@ -36,7 +36,7 @@ function Navbar() {
             </div>
         </div>
         <div className='row'>
-        <nav className = {sidebar ? 'nav-menu col-md-2 col-sm-9 col-xs-9': 'nav-menu active' }>
+        <nav className = {sidebar ? 'nav-menu col-md-3 col-sm-9 col-xs-9': 'nav-menu active' }>
             <ul className='nav-menu-items' onClick={showSidebar}>
                 <li className='sidebar-toggle'>
                     <Nav.Link to="#" className='menu-bars float-end'>
