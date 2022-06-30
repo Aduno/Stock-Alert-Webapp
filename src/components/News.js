@@ -49,8 +49,8 @@ export default function News() {
         </Modal.Header>
         <Modal.Body>
           <div className='row justify-content-center'>
-            <input className='col-11' type='name' placeholder='Full name'/>
-            <input className= 'col-11' type='email' placeholder='Email'/>
+            <input className='col-11 user-input' type='name' placeholder='Full name'/>
+            <input className= 'col-11 user-input' type='email' placeholder='Email'/>
             <Form className='col-11 row'>
               <div key={`inline-$checkbox`} className="mb-3">
                 <Form.Check
