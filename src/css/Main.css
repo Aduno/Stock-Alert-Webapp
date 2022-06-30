@@ -50,6 +50,13 @@
     border: none;
 }
 
+.earning-container{
+    margin-top: 4vh !important;
+}
+.toggle-group{
+    margin-bottom: 2vh !important;
+}
+
 .toggle-group label {
     background-color: rgb(0,84,97);
 }
@@ -63,4 +70,12 @@
 .modal-footer .btn-primary {
     border: none;
     background-color: rgb(0, 204, 204);
+}
+
+#trigger-text{
+    margin: 1vh 0;  
+}
+
+.user-input{
+    margin: 1vh 0;
 }

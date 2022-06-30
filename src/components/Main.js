@@ -1,10 +1,8 @@
 import React, { useRef, useState } from 'react'
 import { Button, Form, FormControl, FormGroup, InputGroup, Modal, ToggleButton, ToggleButtonGroup } from 'react-bootstrap'
-import { AiOutlineSearch } from 'react-icons/ai'
 
 import Graph from './LineGraph'
 import '../css/Main.css'
-import { IconContext } from 'react-icons/lib'
 import Earnings from './BarGraph'
 import IntervalButton from './IntervalButton'
 import AutoCompleteText from './AutoCompleteText'
@@ -48,20 +46,19 @@ function Main() {
         <div id='search-bar-container'>
         
         <div id='search-bar'>
-        <span id='search-bar-input'>
-            <AutoCompleteText onSubmit= {setSymbol}/>
-        </span>
+          <span id='search-bar-input'>
+              <AutoCompleteText onSubmit= {setSymbol}/>
+          </span>
         </div>
         
         
         </div>
         {/* // Graph */}
-        
         <div className='bg-grey col-11'>
-        <Graph symbol={symbol} interval={interval}/>
+          <Graph symbol={symbol} interval={interval}/>
         </div>
 
-        <div className='btn-container'> 
+        {/* <div className='btn-container'> 
           <div className='interval-btn-group'>
             <IntervalButton onChange={setInterval}>1y</IntervalButton>
             <IntervalButton onChange={setInterval}>1w</IntervalButton>
@@ -69,9 +66,10 @@ function Main() {
             <IntervalButton onChange={setInterval}>1h</IntervalButton>
             <IntervalButton onChange={setInterval}>5m</IntervalButton>
           </div>
-        </div>
+        </div> */}
+
         {/* // Earning graph */}
-        <div className='bg-grey col-11'>
+        <div className='bg-grey col-11 earning-container'>
           <Earnings />
         </div>
         {/* // Important data */}
@@ -103,9 +101,9 @@ function Main() {
                 
                 {/* Value input */}
                 <input className='col-11'type='number' step='0.01' onChange={calculate} placeholder='Value'></input>
-                <div className='text-center'>Trigger point: ${calculated}</div>
-                <input class='col-11' type='tel' placeholder='Phone number'/>
-                <input className='col-11' type='email' placeholder='Email'/>
+                <div id='trigger-text' className='text-center'>Trigger point: ${calculated}</div>
+                <input class='col-11 user-input' type='tel' placeholder='Phone number'/>
+                <input className='col-11 user-input' type='email' placeholder='Email'/>
             </div>
               
               
