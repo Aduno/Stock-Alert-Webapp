@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Stock-Alert-Webapp/static/css/main.8bdba1da.css",
-    "main.js": "/Stock-Alert-Webapp/static/js/main.dd7e74cf.js",
+    "main.css": "/Stock-Alert-Webapp/static/css/main.cfdbe87d.css",
+    "main.js": "/Stock-Alert-Webapp/static/js/main.5e7eb0fb.js",
     "static/media/stock.png": "/Stock-Alert-Webapp/static/media/stock.477808acd6dc7e1562b9.png",
     "static/media/elon.png": "/Stock-Alert-Webapp/static/media/elon.f29e5f99d093caf962b6.png",
     "static/media/housing.png": "/Stock-Alert-Webapp/static/media/housing.2e5ff86e8a9ce26c6f79.png",
@@ -14,11 +14,11 @@
     "index.html": "/Stock-Alert-Webapp/index.html",
     "static/media/mining.svg": "/Stock-Alert-Webapp/static/media/mining.d846ab3e762c4eaed3bc12274db74932.svg",
     "static/media/software.svg": "/Stock-Alert-Webapp/static/media/software.a9c260dda1e476522700cd4a7e4da338.svg",
-    "main.8bdba1da.css.map": "/Stock-Alert-Webapp/static/css/main.8bdba1da.css.map",
-    "main.dd7e74cf.js.map": "/Stock-Alert-Webapp/static/js/main.dd7e74cf.js.map"
+    "main.cfdbe87d.css.map": "/Stock-Alert-Webapp/static/css/main.cfdbe87d.css.map",
+    "main.5e7eb0fb.js.map": "/Stock-Alert-Webapp/static/js/main.5e7eb0fb.js.map"
   },
   "entrypoints": [
-    "static/css/main.8bdba1da.css",
-    "static/js/main.dd7e74cf.js"
+    "static/css/main.cfdbe87d.css",
+    "static/js/main.5e7eb0fb.js"
   ]
 }
