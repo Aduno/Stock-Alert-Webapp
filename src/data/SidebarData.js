@@ -32,13 +32,13 @@ export const SidebarData = [
     },
     {
         title: 'Contact us',
-        path: '/contact',
+        path: '/Stock-Alert-Webapp/contact',
         icon: <HiOutlineMailOpen/>,
         cName: 'nav-text'
     },
     {
         title: 'FAQ',
-        path: '/faq',
+        path: '/Stock-Alert-Webapp/faq',
         icon: <BsQuestionLg/>,
         cName: 'nav-text'
     }

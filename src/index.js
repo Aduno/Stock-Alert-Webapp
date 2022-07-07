@@ -15,8 +15,8 @@ root.render(
         <Routes>
           <Route exact path="/Stock-Alert-Webapp" element={<App/>}/>
           <Route path="/stories/:id" element={ <StoryPage/>}/>
-          <Route path="/contact" element= {<Contact/>}/>
-          <Route path="/faq" element={<FAQ/>}/>
+          <Route path="/Stock-Alert-Webapp/contact" element= {<Contact/>}/>
+          <Route path="/Stock-Alert-Webapp/faq" element={<FAQ/>}/>
         </Routes>
       </BrowserRouter>
   </React.StrictMode>
