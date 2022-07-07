@@ -1,0 +1,14 @@
+.contact {
+    margin-top: 10vh;
+}
+
+.contact h1{
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    padding: 5vh 0 3vh 0;
+}
+
+.contact label{
+    padding:0;
+}

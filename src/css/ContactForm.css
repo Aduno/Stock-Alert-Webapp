@@ -1,0 +1,16 @@
+.block{
+    display:block;
+}
+
+.submit-btn {
+    color: white;
+    border: 0;
+    appearance: none;    
+    border-radius: 5px;
+    background-color: rgb(0, 204, 204);
+    margin-top: 2rem;
+}
+
+.comment-container{
+    margin-top: 3vh;
+}

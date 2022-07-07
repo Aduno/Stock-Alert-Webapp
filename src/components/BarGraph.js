@@ -43,7 +43,7 @@ export const data = {
     {
       label: 'Earnings',
       data: [300, 500, 250],
-      backgroundColor: 'rgb(53, 162, 235)',
+      backgroundColor: 'rgb(0, 204, 204)',
     },
   ],
 };

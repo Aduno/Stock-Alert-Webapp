@@ -63,7 +63,9 @@
     align-items: center;
     border-radius: 4px;
 }
-
+.nav-link {
+    padding: 1rem;
+}
 .link-text{
     padding-left: 15px
 }

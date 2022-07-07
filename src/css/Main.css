@@ -46,7 +46,7 @@
 }
 #alert button{
     color: black;
-    background-color: skyblue;
+    background-color: rgb(0, 204, 204);
     border: none;
 }
 
@@ -67,11 +67,11 @@
 }
 .untoggled-btn{
     color: black !important;
-    background-color: skyblue !important;
+    background-color: rgb(0, 204, 204) !important;
 }
 .modal-footer .btn-primary {
     border: none;
-    background-color: skyblue;
+    background-color: rgb(0, 204, 204);
 }
 
 #trigger-text{
