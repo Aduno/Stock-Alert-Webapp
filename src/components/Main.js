@@ -40,6 +40,7 @@ function Main() {
   }
   return (
     <>
+
      {/* search bar */}
     <div className='container-fluid' id='main'>
       <div className='row  justify-content-center'>

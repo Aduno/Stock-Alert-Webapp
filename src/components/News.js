@@ -1,13 +1,10 @@
 import React, { lazy, Suspense, useState } from 'react'
 import NewsBox from './NewsBox'
-import Story from './Story'
 import '../css/News.css'
 
 import { stories } from '../data/NewsStory'
 import { Button, Form, Modal } from 'react-bootstrap'
-import { BrowserRouter, Routes, Route, Router, Link } from "react-router-dom";
 
-import { propTypes } from 'react-bootstrap/esm/Image'
 
 
 export default function News() {
