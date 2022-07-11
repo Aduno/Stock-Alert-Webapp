@@ -13,7 +13,7 @@ root.render(
   <React.StrictMode>
       <HashRouter>
         <Routes>
-          <Route exact path="/Stock-Alert-Webapp" element={<App/>}/>
+          <Route exact path="/" element={<App/>}/>
           <Route path="/stories/:id" element={ <StoryPage/>}/>
           <Route path="/contact" element= {<Contact/>}/>
           <Route path="/faq" element={<FAQ/>}/>

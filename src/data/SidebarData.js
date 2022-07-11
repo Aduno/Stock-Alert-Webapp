@@ -8,25 +8,25 @@ import { BsQuestionLg } from 'react-icons/bs'
 export const SidebarData = [
     {
         title: 'Stock',
-        path: '/Stock-Alert-Webapp#search-bar-container',
+        path: '/#search-bar-container',
         icon: <AiOutlineStock/>,
         cName: 'nav-text'
     },
     {
         title: 'Create alert',
-        path: '/Stock-Alert-Webapp#summary',
+        path: '/#summary',
         icon: <MdAddAlert/>,
         cName: 'nav-text'
     },
     {
         title: 'Discover Stocks',
-        path: '/Stock-Alert-Webapp#discovery',
+        path: '/#discovery',
         icon: <AiOutlineFileSearch/>,
         cName: 'nav-text'
     },
     {
         title: 'Top stories',
-        path: '/Stock-Alert-Webapp#stories',
+        path: '/#stories',
         icon: <FaRegNewspaper/>,
         cName: 'nav-text'
     },

@@ -20,7 +20,7 @@ function Navbar() {
         <div className='row justify-content-around' id="nav">
             <div className='navbar col-6 '>
                 <Nav className="left">
-                    <Nav.Link href="/#/Stock-Alert-Webapp" id=''>
+                    <Nav.Link href="/Stock-Alert-Webapp" id=''>
                         <SiCashapp size={50} color="rgb(0, 204, 204)"/>
                     </Nav.Link>
                 </Nav>
