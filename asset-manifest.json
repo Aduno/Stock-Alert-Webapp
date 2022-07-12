@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Stock-Alert-Webapp/static/css/main.257d4919.css",
-    "main.js": "/Stock-Alert-Webapp/static/js/main.46333040.js",
+    "main.js": "/Stock-Alert-Webapp/static/js/main.473f6802.js",
     "static/media/stock.png": "/Stock-Alert-Webapp/static/media/stock.477808acd6dc7e1562b9.png",
     "static/media/elon.png": "/Stock-Alert-Webapp/static/media/elon.f29e5f99d093caf962b6.png",
     "static/media/housing.png": "/Stock-Alert-Webapp/static/media/housing.2e5ff86e8a9ce26c6f79.png",
@@ -15,10 +15,10 @@
     "static/media/mining.svg": "/Stock-Alert-Webapp/static/media/mining.0cd18d1c9a8ac69a66734715a0f01b54.svg",
     "static/media/software.svg": "/Stock-Alert-Webapp/static/media/software.b01f708a50b55dcb1230d10e7ab89f11.svg",
     "main.257d4919.css.map": "/Stock-Alert-Webapp/static/css/main.257d4919.css.map",
-    "main.46333040.js.map": "/Stock-Alert-Webapp/static/js/main.46333040.js.map"
+    "main.473f6802.js.map": "/Stock-Alert-Webapp/static/js/main.473f6802.js.map"
   },
   "entrypoints": [
     "static/css/main.257d4919.css",
-    "static/js/main.46333040.js"
+    "static/js/main.473f6802.js"
   ]
 }
