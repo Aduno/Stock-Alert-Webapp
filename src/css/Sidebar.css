@@ -69,3 +69,10 @@
 .link-text{
     padding-left: 15px
 }
+
+#language-toggle{
+    padding-top: 10px;
+}
+#language-toggle h3{
+    font-weight: bolder;
+}

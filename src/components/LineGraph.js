@@ -12,6 +12,7 @@ import {
 } from 'chart.js';
 import { Line } from 'react-chartjs-2';
 import {STOCKS, TIMEINTERVAL} from '../data/StockData';
+import { LanguageContext } from '../Apps';
 
 ChartJS.register(
   CategoryScale,
@@ -51,6 +52,7 @@ function Graph(props) {
     return json
   }
   useEffect(()=>{
+    
     fetchData().then(response => {
       const time = response;
       var key = Object.keys(response)[1];
@@ -66,7 +68,8 @@ function Graph(props) {
       }
       label.reverse(); 
       data.reverse();
-      setData(data)
+      setData(data);
+      props.setCurrent(data[data.length-1]);
       setLabel(label);
     })
   }, [props.symbol]) //Need to add props.time or something like that so it updates everytime the time var is updated
@@ -77,6 +80,17 @@ function Graph(props) {
       datasets: [
         {
           label: "time range",
+          data: dataPoints,
+          borderColor: 'rgb(0, 87, 94)',
+          backgroundColor: 'rgb(0, 87, 94)',
+        }
+      ]
+    };
+    const dataFr = {
+      labels,
+      datasets: [
+        {
+          label: "Intervalle de temps",
           data: dataPoints,
           borderColor: 'rgb(0, 87, 94)',
           backgroundColor: 'rgb(0, 87, 94)',
@@ -97,7 +111,11 @@ function Graph(props) {
       },
     };
     return(
-        <Line options= {options} data = {data} />
+      <LanguageContext>{(language)=>(
+        <>
+        {(language=='En')?<Line options= {options} data = {dataFr} />:<Line options= {options} data = {data} />}
+        </>
+      )}</LanguageContext>
     )
   }
   return(

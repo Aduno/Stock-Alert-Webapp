@@ -9,6 +9,7 @@ import {
     Legend,
   } from 'chart.js';
   import { Bar } from 'react-chartjs-2';    
+import { LanguageContext } from '../Apps';
 ChartJS.register(
     CategoryScale,
     LinearScale,
@@ -26,6 +27,18 @@ ChartJS.register(
       title: {
         display: true,
         text: 'Earnings',
+      },
+    },
+  };
+  export const optionsFr = {
+    responsive: true,
+    plugins: {
+      legend: {
+        position: 'top',
+      },
+      title: {
+        display: true,
+        text: "Bénéfice de l'entreprise",
       },
     },
   };
@@ -47,6 +60,21 @@ export const data = {
     },
   ],
 };
+export const dataFr = {
+  labels,
+  datasets: [
+    {
+      label: 'Revenu',
+      data: [500,600,700],
+      backgroundColor: 'rgb(0, 87, 94)',
+    },
+    {
+      label: 'Bénéfices',
+      data: [300, 500, 250],
+      backgroundColor: 'rgb(0, 204, 204)',
+    },
+  ],
+};
 
 const get_symbol = () =>{
     // Get the current stock name and convert to short form that it can be used 
@@ -57,7 +85,15 @@ const query = ()=>{
 }
 function Earnings() {
   return (
-    <Bar options={options} data={data} />
+    <LanguageContext.Consumer>{
+      (language)=>(
+        <>
+        {(language!='En')? <Bar options={options} data={data} />:<Bar options={optionsFr} data={dataFr} />}
+        
+        </>
+      )
+    }</LanguageContext.Consumer>
+    
   )
 }
 

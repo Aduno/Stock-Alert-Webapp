@@ -1,6 +1,7 @@
 import React from 'react';
 import { STOCKNAMES, STOCKS } from '../data/StockData';
 import '../css/AutoCompleteText.css'
+import { LanguageContext } from '../Apps';
 
 function swap(json){
     var ret = {};
@@ -60,12 +61,14 @@ export default class AutoCompleteText extends React.Component {
     render() {
         const {text} = this.state;
         return (
-            <div className='AutoCompleteText'>
-                <input value={text} placeholder='Search stock by name' onChange={this.onTextChanged} type="text" />
+            <LanguageContext.Consumer>{(language)=>(
+                <div className='AutoCompleteText'>
+                <input value={text} placeholder={language==='En'?"Rechercher des actions par nom":'Search stock by name'} onChange={this.onTextChanged} type="text" />
                 <div className='suggestion-container'>
                 {this.renderSuggestions()}
                 </div>
-            </div>
+             </div>
+            )}</LanguageContext.Consumer>
         )
     }
 }

@@ -13,6 +13,7 @@ import software from '../img/icons/software.svg'
 import telecom from '../img/icons/telecom.svg'
 
 import {STOCKTYPE} from '../data/StockData';
+import { LanguageContext } from '../Apps';
 
 let stockList = STOCKTYPE.Agriculture;
 
@@ -38,10 +39,11 @@ function Discovery() {
   // useEffect(()=>{
   // }, [list])
   return (
+    <LanguageContext.Consumer>{(language)=>(
     <>
     {/* // Title */}
     <div id='discovery' className='row justify-content-center'>
-      <h1 id='discovery-title'>Discover stocks</h1>
+      <h1 id='discovery-title'>{(language=='En')? 'Découvrir titres':'Discover stocks'}</h1>
     {/* // Interactive button */}
       <div className='d-flex justify-content-center'>
         <Form className='btn-group-container'>
@@ -52,31 +54,31 @@ function Discovery() {
               </button>
               <button type="button" class="btn btn-primary col-5" onClick={()=>onSelectItem('Banking')}>
               <img src={banking} alt=''/>
-                <span>Banking</span>
+                <span>{(language=='En'? 'Bancaire': 'Banking')}</span>
               </button>
               <button type="button" class="btn btn-primary col-5" onClick={()=>onSelectItem('Energy')}>
                 <img src={energy} alt=''/>
-                <span>Energy</span>
+                <span>{(language=='En'? 'Energie': 'Energy')}</span>
               </button>
               <button type="button" class="btn btn-primary col-5" onClick={()=>onSelectItem('Engineering')}>
                 <img src={engineering} alt=''/>
-                <span>Engineering</span>
+                <span>{(language=='En'? 'Ingénierie': 'Engineering')}</span>
               </button>
               <button type="button" class="btn btn-primary col-5" onClick={()=>onSelectItem('Insurance')}>
                 <img src={insurance} alt=''/>
-                <span>Insurance</span>
+                <span>{(language=='En'? 'Assurance': 'Insurance')} </span>
               </button>
               <button type="button" class="btn btn-primary col-5" onClick={()=>onSelectItem('Mining')}>
                 <img src={mining} alt=''/>
-                <span>Mining</span>
+                <span>{(language=='En'? 'Exploitation minière': 'Mining')} </span>
               </button>
               <button type="button" class="btn btn-primary col-5" onClick={()=>onSelectItem('Software')}>
                 <img src={software} alt=''/>
-                <span>Software</span>
+                <span>{(language=='En'? 'Logiciel': 'Software')}</span>
               </button>
               <button type="button" class="btn btn-primary col-5" onClick={()=>onSelectItem('Telecom')}>
                 <img src={telecom} alt=''/>
-                <span>Telecom</span>
+                <span>{(language=='En'? 'Télécom': 'Telecom')}</span>
               </button>
               </div>
           </Form>
@@ -95,10 +97,8 @@ function Discovery() {
         </div>
       
     </div>
-    
-
-    {/*// Dynamic list */}
     </>
+    )}</LanguageContext.Consumer>
   )
 }
 
