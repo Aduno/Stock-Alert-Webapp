@@ -102,7 +102,7 @@ function Main(props) {
       <div className='row  justify-content-center'>
         <div id='search-bar-container'>
         
-        <div id='search-bar'>
+        <div id='search-bar' className='col-lg-7'>
           <span id='search-bar-input'>
               <AutoCompleteText onSubmit= {setSymbol}/>
           </span>
@@ -111,7 +111,7 @@ function Main(props) {
         
         </div>
         {/* // Graph */}
-        <div className='bg-grey col-11'>
+        <div className='bg-grey col-11 col-lg-7 graph-container'>
           <Graph symbol={symbol} interval={interval} setCurrent={updateCurrent}/>
         </div>
 
@@ -126,13 +126,13 @@ function Main(props) {
         </div> */}
 
         {/* // Earning graph */}
-        <div className='bg-grey col-11 earning-container'>
+        <div className='bg-grey col-11 col-lg-7 earning-container'>
           <Earnings />
         </div>
         {/* // Important data */}
-        <Summary />
+        <Summary className='col-11 col-lg-7'/>
         {/* // Subscribe */}
-        <div id='alert' className="col-4 text-center sub-btn">
+        <div id='alert' className="col-4  text-center sub-btn">
           <Button onClick={handleShow}>
           {(language!='En'? 'Subscribe':'S’abonner à')}
           </Button>

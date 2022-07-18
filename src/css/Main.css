@@ -50,6 +50,12 @@
     border: none;
 }
 
+@media screen and (min-width:700px){
+    .graph-container{
+
+    }
+}
+
 .earning-container{
     margin-top: 4vh !important;
 }
