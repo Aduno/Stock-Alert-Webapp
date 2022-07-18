@@ -18,7 +18,7 @@ function Contact(props) {
     <>
         <Navbar languageToggle={props.languageToggle}/>
             <div className='container-fluid contact'>
-                <h1>{language==='En'? 'Partagez vos commentaires!':'Share your feedback!'}</h1>
+                <h1>{language==='En'? 'Partagez vos commentaires ou vos questions!':'Share your feedback or questions!'}</h1>
                 <div className='container' id='input'>
                     <ContactForm/>
                 </div>

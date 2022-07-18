@@ -134,7 +134,7 @@ function Main(props) {
         {/* // Subscribe */}
         <div id='alert' className="col-4  text-center sub-btn">
           <Button onClick={handleShow}>
-          {(language!='En'? 'Subscribe':'S’abonner à')}
+          {(language!='En'? 'Create Alert':'Créer une alerte')}
           </Button>
         </div>
         <Modal show={show} onHide={handleClose}>
