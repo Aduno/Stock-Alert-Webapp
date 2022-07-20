@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import {
     Chart as ChartJS,
     CategoryScale,
@@ -18,7 +18,43 @@ ChartJS.register(
     Tooltip,
     Legend
   );
-  export const options = {
+
+
+function Earnings(props) {
+  const [revVal, setRevVal] = useState();
+  const [profitVal, setProfitVal] = useState();
+
+  const [track, setTrack] = useState(0);
+  const earningOptions = [[41,54,220],[512,337, 394],[712,295,486],[132,86,20],[579, 840, 921]];
+  const profitOptions = [[-300,-202,138], [-142, -227, -69],[456, 54, 128] , [87, 15, -59], [211, 396,525]];
+  const updateData = () =>{
+    if(track===0){
+      setRevVal(earningOptions[4])
+      setProfitVal(profitOptions[4])
+      setTrack(1);
+    }
+    else if(track===1){
+      setRevVal(earningOptions[1])
+      setProfitVal(profitOptions[1])
+      setTrack(2);
+    }
+    else if(track===2){
+      setRevVal(earningOptions[2])
+      setProfitVal(profitOptions[2])
+      setTrack(3);
+    }
+    else if(track===3){
+      setRevVal(earningOptions[0])
+      setProfitVal(profitOptions[0])
+      setTrack(4);
+    }
+    else if(track===4){
+      setRevVal(earningOptions[0])
+      setProfitVal(profitOptions[0])
+      setTrack(0);
+    }
+  }
+  const options = {
     responsive: true,
     plugins: {
       legend: {
@@ -30,7 +66,7 @@ ChartJS.register(
       },
     },
   };
-  export const optionsFr = {
+  const optionsFr = {
     responsive: true,
     plugins: {
       legend: {
@@ -45,45 +81,39 @@ ChartJS.register(
 
   const labels = [2019, 2020, 2021];
 
-export const data = {
+ const data = {
   labels,
   datasets: [
     {
       label: 'Revenue',
-      data: [500,600,700],
+      data: revVal,
       backgroundColor: 'rgb(0, 87, 94)',
     },
     {
       label: 'Earnings',
-      data: [300, 500, 250],
+      data: profitVal,
       backgroundColor: 'rgb(0, 204, 204)',
     },
   ],
 };
-export const dataFr = {
+const dataFr = {
   labels,
   datasets: [
     {
       label: 'Revenu',
-      data: [500,600,700],
+      data: revVal,
       backgroundColor: 'rgb(0, 87, 94)',
     },
     {
       label: 'Bénéfices',
-      data: [300, 500, 250],
+      data: profitVal,
       backgroundColor: 'rgb(0, 204, 204)',
     },
   ],
 };
-
-const get_symbol = () =>{
-    // Get the current stock name and convert to short form that it can be used 
-}
-const query = ()=>{
-
-    return 'query?function=EARNINGS'
-}
-function Earnings() {
+useEffect(()=>{
+  updateData();
+}, [props.symbol]);
   return (
     <LanguageContext.Consumer>{
       (language)=>(

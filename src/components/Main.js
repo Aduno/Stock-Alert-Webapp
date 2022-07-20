@@ -115,22 +115,12 @@ function Main(props) {
           <Graph symbol={symbol} interval={interval} setCurrent={updateCurrent}/>
         </div>
 
-        {/* <div className='btn-container'> 
-          <div className='interval-btn-group'>
-            <IntervalButton onChange={setInterval}>1y</IntervalButton>
-            <IntervalButton onChange={setInterval}>1w</IntervalButton>
-            <IntervalButton onChange={setInterval}>1d</IntervalButton>
-            <IntervalButton onChange={setInterval}>1h</IntervalButton>
-            <IntervalButton onChange={setInterval}>5m</IntervalButton>
-          </div>
-        </div> */}
-
         {/* // Earning graph */}
         <div className='bg-grey col-11 col-lg-7 earning-container'>
-          <Earnings />
+          <Earnings symbol={symbol}/>
         </div>
         {/* // Important data */}
-        <Summary className='col-11 col-lg-7'/>
+        <Summary symbol={symbol} className='col-11 col-lg-7'/>
         {/* // Subscribe */}
         <div id='alert' className="col-4  text-center sub-btn">
           <Button onClick={handleShow}>
